@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "properties": {
+      "chunk_id": {"type":"keyword"},
+      "text": {"type":"text"},
+      "source": {
+        "properties": {
+          "url": {"type":"keyword","index":false},
+          "domain": {"type":"keyword"},
+          "title": {"type":"text"},
+          "published_at": {"type":"date"},
+          "retrieved_at": {"type":"date"},
+          "tier": {"type":"keyword"},
+          "jurisdiction": {"type":"keyword"},
+          "primary_source": {"type":"boolean"},
+          "content_hash": {"type":"keyword"},
+          "injection_risk": {"type":"float"}
+        }
+      }
+    }
+  }
+}

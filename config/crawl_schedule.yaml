@@ -1,0 +1,20 @@
+defaults:
+  max_concurrency: 4
+  requests_per_second_per_domain: 0.5
+  user_agent: NOVA-Web-Crawler/1.0
+profiles:
+  critical_regulator:
+    interval_minutes: 60
+    max_depth: 3
+  central_bank:
+    interval_minutes: 120
+    max_depth: 3
+  company_ir:
+    interval_minutes: 240
+    max_depth: 2
+  established_research:
+    interval_minutes: 720
+    max_depth: 2
+  blogs:
+    interval_minutes: 1440
+    max_depth: 1

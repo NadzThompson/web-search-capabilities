@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "required": ["publisher", "tier", "primary_source"],
+    "properties": {
+      "publisher": {"type":"string"},
+      "tier": {"enum":["t1_primary","t2_institutional","t3_established","t4_commentary","t5_general","t6_unverified"]},
+      "jurisdiction": {"type":["string","null"]},
+      "primary_source": {"type":"boolean"},
+      "crawl_profile": {"type":"string"},
+      "notes": {"type":"string"}
+    }
+  }
+}

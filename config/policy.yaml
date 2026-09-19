@@ -1,0 +1,26 @@
+proprietary_hierarchy:
+  - restricted
+  - sensitive
+  - confidential
+  - internal
+  - public
+raw_external_egress:
+  restricted: deny
+  sensitive: deny
+  confidential: deny
+  internal: deny
+  public: allow
+block_content_types:
+  - credential
+  - secret
+  - authentication_data
+  - customer_pii
+  - payment_data
+fail_closed: true
+search_modes:
+  strict:
+    allowed_tiers: [t1_primary, t2_institutional]
+  trusted:
+    allowed_tiers: [t1_primary, t2_institutional, t3_established, t4_commentary]
+  open:
+    allowed_tiers: [t1_primary, t2_institutional, t3_established, t4_commentary, t5_general, t6_unverified]

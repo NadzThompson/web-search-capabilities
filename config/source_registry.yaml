@@ -1,0 +1,40 @@
+osfi-bsif.gc.ca:
+  publisher: OSFI
+  tier: t1_primary
+  jurisdiction: Canada
+  primary_source: true
+bankofcanada.ca:
+  publisher: Bank of Canada
+  tier: t1_primary
+  jurisdiction: Canada
+  primary_source: true
+bis.org:
+  publisher: Bank for International Settlements
+  tier: t1_primary
+  jurisdiction: Global
+  primary_source: true
+federalreserve.gov:
+  publisher: Federal Reserve
+  tier: t1_primary
+  jurisdiction: United States
+  primary_source: true
+ecb.europa.eu:
+  publisher: European Central Bank
+  tier: t1_primary
+  jurisdiction: European Union
+  primary_source: true
+imf.org:
+  publisher: International Monetary Fund
+  tier: t2_institutional
+  jurisdiction: Global
+  primary_source: true
+reuters.com:
+  publisher: Reuters
+  tier: t3_established
+  jurisdiction: Global
+  primary_source: false
+ft.com:
+  publisher: Financial Times
+  tier: t3_established
+  jurisdiction: Global
+  primary_source: false

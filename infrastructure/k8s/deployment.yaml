@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nova-web-search
+spec:
+  replicas: 2
+  selector:
+    matchLabels: {app: nova-web-search}
+  template:
+    metadata:
+      labels: {app: nova-web-search}
+    spec:
+      serviceAccountName: nova-web-search
+      containers:
+        - name: api
+          image: REPLACE_WITH_APPROVED_REGISTRY/nova-web-search:4.0.0
+          ports: [{containerPort: 8080}]
+          env:
+            - {name: NOVA_ENV, value: "prod"}
+            - {name: NOVA_ALLOW_LIVE_FETCH, value: "false"}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          resources:
+            requests: {cpu: "250m", memory: "512Mi"}
+            limits: {cpu: "1", memory: "1Gi"}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nova-web-search
+spec:
+  selector: {app: nova-web-search}
+  ports: [{port: 80, targetPort: 8080}]

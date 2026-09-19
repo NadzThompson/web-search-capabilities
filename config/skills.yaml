@@ -1,0 +1,18 @@
+version: 1
+skills:
+  - {name: search_intent, mandatory: false, module: app.skills.search_intent}
+  - {name: query_security, mandatory: true, module: app.skills.query_security}
+  - {name: query_abstraction, mandatory: true, module: app.skills.query_abstraction}
+  - {name: search_planning, mandatory: false, module: app.skills.search_planning}
+  - {name: source_policy, mandatory: true, module: app.skills.source_policy}
+  - {name: web_retrieval, mandatory: false, module: app.skills.web_retrieval}
+  - {name: crawler_freshness, mandatory: false, module: app.skills.crawler_freshness}
+  - {name: prompt_injection_screening, mandatory: true, module: app.skills.prompt_injection_screening}
+  - {name: source_trust, mandatory: true, module: app.skills.source_trust}
+  - {name: hybrid_retrieval, mandatory: false, module: app.skills.hybrid_retrieval}
+  - {name: evidence_reranking, mandatory: false, module: app.skills.evidence_reranking}
+  - {name: corroboration, mandatory: false, module: app.skills.corroboration}
+  - {name: citation_verification, mandatory: true, module: app.skills.citation_verification}
+  - {name: evidence_sufficiency, mandatory: true, module: app.skills.evidence_sufficiency}
+  - {name: audit_lineage, mandatory: true, module: app.skills.audit_lineage}
+  - {name: output_dlp, mandatory: true, module: app.skills.output_dlp}
