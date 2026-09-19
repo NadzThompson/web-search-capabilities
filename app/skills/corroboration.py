@@ -1,4 +1,3 @@
-from collections import defaultdict
 from app.skills.types import SkillResult
 
 def run(chunks: list) -> SkillResult:
